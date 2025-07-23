@@ -634,7 +634,7 @@ def show_performance_analysis(df_2021):
             color='Overall_Performance',
             color_continuous_scale='Greens'
         )
-        fig_top_districts.update_layout(height=600, yaxis={'categoryorder': 'total ascending'}))
+        fig_top_districts.update_layout(height=600, yaxis={'categoryorder': 'total ascending'})
         st.plotly_chart(fig_top_districts, use_container_width=True)
     
     with col2:
