@@ -190,7 +190,6 @@ def main():
         "🔧 Data Preprocessing",
         "📈 Exploratory Data Analysis",
         "📊 Performance Analysis",
-        "🗺️ District-Level Mapping",
         "💡 Key Insights & Recommendations",
         "🎯 Detailed Learning Outcomes"
     ]
