@@ -335,7 +335,7 @@ def show_preprocessing(df, df_processed, math_cols, science_cols, sst_cols, lang
     
     with col1:
         st.markdown("**Sample District Performance:**")
-        st.markdown(f"**District:** {sample_district['District']}, {sample_district['State]}")
+        st.markdown("**District:** {sample_district['District']}, {sample_district['State]}")
         st.metric("Math Performance", f"{sample_district['Math_Performance']:.2f}%")
         st.metric("Science Performance", f"{sample_district['Science_Performance']:.2f}%")
     
