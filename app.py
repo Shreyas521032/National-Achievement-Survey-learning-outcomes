@@ -57,7 +57,7 @@ def load_data():
     """Load and preprocess the NAS dataset"""
     try:
         # Try to load from uploaded file first
-        df = pd.read_csv('DATASETDATASCIENCE.csv')
+        df = pd.read_csv('Dataset/National_Achievement_Survey_dataset.csv')
     except:
         st.error("Please ensure DATASETDATASCIENCE.csv is in the same directory as this script.")
         st.stop()
