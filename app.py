@@ -480,7 +480,7 @@ def show_eda(df_2021):
             color=bottom_states['Overall_Performance'],
             color_continuous_scale='Reds'
         )
-        fig_bottom.update_layout(height=400, yaxis={'categoryorder': 'total descending'}))
+        fig_bottom.update_layout(height=400, yaxis={'categoryorder': 'total descending'})
         st.plotly_chart(fig_bottom, use_container_width=True)
     
     # Subject-wise State Comparison
