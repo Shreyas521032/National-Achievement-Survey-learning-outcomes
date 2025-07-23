@@ -465,7 +465,7 @@ def show_eda(df_2021):
             color=top_states['Overall_Performance'],
             color_continuous_scale='Viridis'
         )
-        fig_top.update_layout(height=400, yaxis={'categoryorder': 'total ascending'}))
+        fig_top.update_layout(height=400, yaxis={'categoryorder': 'total ascending'})
         st.plotly_chart(fig_top, use_container_width=True)
     
     with col2:
