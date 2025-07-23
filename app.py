@@ -125,9 +125,10 @@ learning_outcomes_data = {
 
 def show_learning_outcomes():
     st.markdown("<div class=\"section-header\">🎯 Detailed Learning Outcomes</div>", unsafe_allow_html=True)
-    st.markdown("""This section provides a detailed breakdown of each learning outcome assessed in the NAS Class 8 survey, 
+    st.markdown("""
+    This section provides a detailed breakdown of each learning outcome assessed in the NAS Class 8 survey, 
     along with its significance in the broader educational context.
-    """)
+    """, unsafe_allow_html=False)
 
     subject_categories = {
         "L": "Language",
@@ -222,10 +223,11 @@ def show_home_and_overview(df, df_processed):
     """Display home page and dataset overview"""
     st.markdown('<div class="section-header">🏠 Welcome to NAS Class 8 Analysis Dashboard</div>', unsafe_allow_html=True)
     
-    st.markdown("""This interactive dashboard provides comprehensive analysis of the **National Achievement Survey (NAS)** 
+    st.markdown("""
+    This interactive dashboard provides comprehensive analysis of the **National Achievement Survey (NAS)** 
     for Class 8 students across India. Explore learning outcomes, performance trends, and educational insights 
     from one of India's largest educational assessments.
-    """)
+    """, unsafe_allow_html=False)
     
     # Dataset Overview
     st.markdown('<div class="section-header">📋 About the Dataset</div>', unsafe_allow_html=True)
@@ -322,7 +324,8 @@ def show_preprocessing(df, df_processed, math_cols, science_cols, sst_cols, lang
     """Display data preprocessing steps and results"""
     st.markdown('<div class="section-header">🔧 Data Preprocessing Pipeline</div>', unsafe_allow_html=True)
     
-    st.markdown("""This section details the preprocessing steps applied to transform the raw NAS dataset 
+    st.markdown("""
+    This section details the preprocessing steps applied to transform the raw NAS dataset 
     into a clean, analysis-ready format.
     """)
     
@@ -408,14 +411,15 @@ def show_preprocessing(df, df_processed, math_cols, science_cols, sst_cols, lang
     # Step 4: Performance Score Calculation
     st.markdown("### Step 4: Aggregated Performance Score Calculation")
     
-    st.markdown("""**Methodology:** For each subject area, we calculate the mean performance across all related learning outcomes:
+    st.markdown("""
+    **Methodology:** For each subject area, we calculate the mean performance across all related learning outcomes:
     
     - **Math Performance** = Average of all Mathematics learning outcomes
     - **Science Performance** = Average of all Science learning outcomes  
     - **SST Performance** = Average of all Social Science learning outcomes
     - **Language Performance** = Average of all Language learning outcomes
     - **Overall Performance** = Average of all four subject performances
-    """)
+    """, unsafe_allow_html=False)
     
     # Show sample calculations
     sample_district = df_processed.iloc[0]
@@ -795,10 +799,11 @@ def show_district_mapping(df_2021):
     """Display district-level mapping visualization"""
     st.markdown('<div class="section-header">🗺️ District-Level Performance Mapping</div>', unsafe_allow_html=True)
     
-    st.markdown("""This section provides geographical visualization of district-level performance across India. 
+    st.markdown("""
+    This section provides geographical visualization of district-level performance across India. 
     Due to the complexity of Indian district boundaries and the need for accurate geospatial data, 
     we present alternative visualizations that effectively show geographical patterns.
-    """)
+    """, unsafe_allow_html=False)
     
     # State-wise heatmap
     st.markdown("### 🌡️ State-wise Performance Heatmap")
@@ -922,7 +927,8 @@ def show_district_mapping(df_2021):
     # Performance density map alternative
     st.markdown("### 📍 Performance Density Visualization")
     
-    st.markdown("""**Note:** For a complete geographical mapping experience with actual district boundaries, 
+    st.markdown("""
+    **Note:** For a complete geographical mapping experience with actual district boundaries, 
     you would need to integrate with geospatial libraries like GeoPandas and obtain 
     Indian district shapefiles from sources like:
     
@@ -932,7 +938,7 @@ def show_district_mapping(df_2021):
     
     The current implementation provides comprehensive performance analysis through 
     alternative visualizations that effectively communicate geographical patterns.
-    """)
+    """, unsafe_allow_html=False)
     
     # Create a simple coordinate-based visualization
     # This is a simplified representation - in a real implementation, you'd use actual coordinates
@@ -965,10 +971,11 @@ def show_district_mapping(df_2021):
     
     st.plotly_chart(fig_map, use_container_width=True)
     
-    st.info("""💡 **Implementation Note:** The above map uses simulated coordinates for demonstration. 
+    st.info("""
+    💡 **Implementation Note:** The above map uses simulated coordinates for demonstration. 
     For production use, integrate with actual district coordinate data and consider using 
     libraries like Folium or Plotly with real geospatial data.
-    """)
+    """, unsafe_allow_html=False)
 
 def show_insights_and_recommendations(df_2021):
     """Display key insights and recommendations"""
@@ -1119,7 +1126,8 @@ def show_insights_and_recommendations(df_2021):
     # Call to Action
     st.markdown("### 🚀 Next Steps")
     
-    st.markdown("""<div class="insight-box">
+    st.markdown("""
+    <div class="insight-box">
     <h4>Immediate Actions Required:</h4>
     
     1. **Data-Driven Decision Making:** Use this analysis to prioritize resource allocation
