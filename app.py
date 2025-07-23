@@ -220,7 +220,7 @@ def main():
 
 def show_home_and_overview(df, df_processed):
     """Display home page and dataset overview"""
-    st.markdown('<div class="section-header">🏠 Welcome to NAS Class 8 Analysis Dashboard</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-header">🏠 Welcome to NAS Analysis Dashboard</div>', unsafe_allow_html=True)
     
     st.markdown("""
     This interactive dashboard provides comprehensive analysis of the **National Achievement Survey (NAS)** 
