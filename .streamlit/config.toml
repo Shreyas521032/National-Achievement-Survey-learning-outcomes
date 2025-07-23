@@ -1,7 +1,7 @@
 [theme]
-base = "dark"
-primaryColor = "#3498db"          # Your custom blue
-backgroundColor = "#0e1117"       # Dark background
-secondaryBackgroundColor = "#262730"  # Slightly lighter for cards
-textColor = "#fafafa"            # Light text
-font = "sans serif"              # Clean, professional font
+base = "light"
+primaryColor = "#1565C0"          # Material Design blue
+backgroundColor = "#FAFAFA"        # Soft off-white
+secondaryBackgroundColor = "#F5F5F5"  # Light gray
+textColor = "#37474F"             # Blue-gray text
+font = "sans serif"
