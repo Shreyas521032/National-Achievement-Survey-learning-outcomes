@@ -301,7 +301,8 @@ def show_home_and_overview(df, df_processed):
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("""#### Assessment Framework
+        st.markdown("""
+        #### Assessment Framework
         - **Competency-Based Evaluation:** Tests conceptual understanding and application
         - **Multiple Choice Questions:** Standardized format for consistency
         - **Representative Sampling:** Ensures geographic and demographic diversity
@@ -309,7 +310,8 @@ def show_home_and_overview(df, df_processed):
         """, unsafe_allow_html=False)
     
     with col2:
-        st.markdown("""#### Impact & Applications  
+        st.markdown("""
+        #### Impact & Applications  
         - **Policy Development:** Informs educational policy decisions
         - **Teacher Training:** Identifies areas for professional development
         - **Curriculum Enhancement:** Guides curriculum design and improvement
