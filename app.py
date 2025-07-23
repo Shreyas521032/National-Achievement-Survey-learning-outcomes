@@ -144,9 +144,6 @@ def show_learning_outcomes():
                 
                 st.markdown(f"**{lo_code}:** {description}")
                 st.info(f"**Significance:** {significance}")
-                st.markdown("--- (End of learning outcome) ---")
-
-
 
 
 @st.cache_data
