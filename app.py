@@ -61,6 +61,94 @@ def load_data():
     
     return df
 
+
+# Learning Outcomes Data
+learning_outcomes_data = {
+    "L813": "Read textual/non-textual materials with comprehension and identifies the details, characters, main idea and sequence of ideas and events while reading. Significance: Essential for developing strong reading comprehension and analytical skills, crucial for academic success and information processing.",
+    "M601": "Solves problems involving large numbers by applying appropriate operations. Significance: Fundamental for building a strong mathematical foundation, enabling students to handle complex calculations and real-world quantitative problems.",
+    "M606": "Solves problems on daily life situations involving addition and subtraction of fractions / decimals. Significance: Practical application of mathematical concepts, fostering problem-solving skills relevant to everyday scenarios like finance and measurements.",
+    "M620": "Finds out the perimeter and area of rectangular objects in the surroundings like floor of the class room, surfaces of a chalk box etc. Significance: Develops spatial reasoning and practical geometry skills, useful in fields like architecture, engineering, and design.",
+    "M621": "Arranges given/collected information in the form of table, pictograph and bar graph and interprets them. Significance: Crucial for data literacy, enabling students to organize, visualize, and understand information, a key skill in the data-driven world.",
+    "M702": "Interprets the division and multiplication of fractions. Significance: Advances understanding of fractional arithmetic, vital for higher-level mathematics and scientific calculations.",
+    "M705": "Solves problems related to daily life situations involving rational numbers. Significance: Enhances practical mathematical skills, allowing students to apply rational number concepts to real-world financial and measurement contexts.",
+    "M706": "Uses exponential form of numbers to simplify problems involving multiplication and division of large numbers. Significance: Simplifies complex calculations, providing a powerful tool for scientific notation and understanding exponential growth/decay.",
+    "M707": "Adds/subtracts algebraic expressions. Significance: Introduces foundational algebraic skills, essential for solving equations and understanding mathematical relationships.",
+    "M710": "Solves problems related to conversion of percentage to fraction and decimal and vice versa. Significance: Develops versatility in numerical representation, critical for financial literacy, statistics, and data interpretation.",
+    "M717": "Finds out approximate area of closed shapes by using unit square grid/graph sheet. Significance: Fosters estimation and approximation skills, useful in various practical applications where precise measurements are not always feasible.",
+    "M719": "Finds various representative values for simple data from her/his daily life contexts like mean, median and mode. Significance: Introduces basic statistical concepts, enabling students to analyze and summarize data from their environment.",
+    "M721": "Interprets data using bar graph. Significance: Enhances data visualization and interpretation skills, allowing students to draw conclusions from graphical representations.",
+    "M801": "Generalizes properties of addition, subtraction, multiplication and division of rational numbers through patterns. Significance: Deepens understanding of number properties, crucial for advanced mathematical reasoning and abstract thinking.",
+    "M802": "Finds rational numbers between two given rational numbers. Significance: Reinforces understanding of number density and rational number properties, important for number theory and advanced mathematics.",
+    "M803": "Proves divisibility rules of 2, 3,4, 5, 6, 9 and 11. Significance: Develops number sense and logical reasoning, useful for mental math and understanding number theory.",
+    "M804": "Finds squares, cubes, square roots and cube roots of numbers using different methods. Significance: Builds foundational skills in exponents and roots, essential for algebra, geometry, and various scientific calculations.",
+    "M808": "Uses various algebraic identities in solving problems of daily life. Significance: Applies algebraic concepts to practical situations, enhancing problem-solving abilities in diverse contexts.",
+    "M812": "Verifies properties of parallelogram and establishes the relationship between them through reasoning. Significance: Develops geometric reasoning and proof skills, fundamental for advanced geometry and spatial analysis.",
+    "M818": "Finds surface area and volume of cuboidal and cylindrical object. Significance: Essential for understanding 3D shapes and their properties, with applications in engineering, design, and packaging.",
+    "M819": "Draws and interprets bar charts and pie charts. Significance: Strengthens data visualization and interpretation skills, enabling effective communication of data insights.",
+    "SCI703": "Classifies materials and organisms based on properties/characteristics. Significance: Develops observational and categorization skills, foundational for scientific inquiry and understanding biological and chemical diversity.",
+    "SCI704": "Conducts simple investigation to seek answers to queries. Significance: Fosters scientific inquiry and experimental design skills, crucial for hands-on learning and problem-solving in science.",
+    "SCI705": "Relates processes and phenomenon with causes. Significance: Promotes critical thinking and cause-and-effect reasoning, essential for understanding scientific principles and natural phenomena.",
+    "SCI708": "Measures and calculates eg, temperature; pulse rate; speed of moving objects; time period of a simple pendulum, etc. Significance: Develops practical measurement and calculation skills, vital for experimental science and data collection.",
+    "SCI710": "Plots and interprets graphs. Significance: Enhances data analysis and visualization skills, allowing students to understand trends and relationships in scientific data.",
+    "SCI711": "Constructs models using materials from surroundings and explains their working. Significance: Encourages creativity and practical application of scientific knowledge, fostering hands-on learning and understanding of scientific principles.",
+    "SCI801": "Differentiates materials, organism and processes. Significance: Refines classification and analytical skills, crucial for understanding the diversity and complexity of the natural world.",
+    "SCI804": "Relates processes and phenomenon with causes. Significance: Deepens understanding of scientific causality, enabling students to explain and predict natural events.",
+    "SCI805": "Explains processes and phenomenon. Significance: Develops clear and concise scientific communication skills, essential for conveying complex ideas.",
+    "SCI807": "Measures angles of incidence and reflection, etc. Significance: Applies geometric principles to optics, fundamental for understanding light and its behavior.",
+    "SCI811": "Applies learning of scientific concepts in day-to-day life. Significance: Connects classroom learning to real-world applications, making science relevant and practical.",
+    "SCI813": "Makes efforts to protect environment. Significance: Fosters environmental awareness and responsibility, promoting sustainable practices and civic engagement.",
+    "SST605": "Identifies latitudes and longitudes, eg, poles, equator, tropics, States/UTs of India and other neighboring countries on globe and the world map. Significance: Develops geographical literacy and spatial awareness, essential for understanding global locations and navigation.",
+    "SST610": "Locates important historical sites, places on an outline map of India. Significance: Enhances historical and geographical knowledge, connecting historical events to their physical locations.",
+    "SST625": "Describes the functioning of rural and urban local government bodies in sectors like health and education. Significance: Promotes civic knowledge and understanding of local governance, empowering students to engage with their communities.",
+    "SST703": "Explains preventive actions to be undertaken in the event of disasters. Significance: Develops awareness of disaster preparedness and safety measures, crucial for personal and community well-being.",
+    "SST704": "Describes formation of landforms due to various factors. Significance: Enhances understanding of geological processes and physical geography, explaining the Earth's diverse landscapes.",
+    "SST722": "Explains the significance of equality in democracy. Significance: Fosters civic values and understanding of democratic principles, promoting social justice and human rights.",
+    "SST726": "Describes the process of election to the legislative assembly. Significance: Educates students on democratic processes and electoral systems, encouraging informed participation in governance.",
+    "SST731": "Explains the functioning of media with appropriate examples from newspapers. Significance: Develops media literacy and critical thinking about information sources, essential for navigating the modern information landscape.",
+    "SST733": "Differentiates between different kinds of markets. Significance: Introduces economic concepts and market structures, providing foundational knowledge for understanding commerce and trade.",
+    "SST734": "Traces how goods travel through various market places. Significance: Explains supply chains and economic flows, illustrating the journey of products from production to consumption.",
+    "SST802": "Describes major crops, types of farming and agricultural practices in her/his own area/state. Significance: Connects students to local agriculture and food systems, fostering understanding of economic geography and sustainability.",
+    "SST805": "Locates distribution of important minerals eg coal and mineral oil on the world map. Significance: Enhances geographical knowledge of natural resources and their global distribution, relevant to economics and environmental studies.",
+    "SST807": "Justifies judicious use of natural resources. Significance: Promotes environmental stewardship and sustainable resource management, encouraging responsible consumption and conservation.",
+    "SST809": "Draws interrelationship between types of farming and development in different regions of the world. Significance: Develops understanding of global economic patterns and the impact of agriculture on regional development.",
+    "SST810": "Distinguishes the modern period from the medieval and the ancient periods through the use of sources. Significance: Fosters historical periodization and source analysis skills, crucial for understanding historical change and continuity.",
+    "SST815": "Explains the origin, nature and spread of the revolt of 1857 and the lessons learned from it. Significance: Provides historical context on a pivotal event in Indian history, fostering understanding of colonial rule and resistance movements.",
+    "SST816": "Analyses the decline of pre-existing urban centers and handicraft industries and the development of new urban centers and industries in India during the colonial period. Significance: Explores the economic and social impact of colonialism, highlighting historical transformations in urban and industrial landscapes.",
+    "SST818": "Analyses the issues related to caste, women, widow remarriage, child marriage, social reforms and the laws and policies of colonial administration towards these issues. Significance: Examines social justice issues and historical reform movements, promoting critical awareness of social inequalities and legal frameworks.",
+    "SST823": "Applies the knowledge of the Fundamental Rights to find out about their violation, protection and promotion in a given situation. Significance: Empowers students with knowledge of their rights and legal protections, fostering civic engagement and advocacy.",
+    "SST827": "Describes the process of making a law (eg Domestic Violence Act, RTI Act, RTE Act). Significance: Educates students on legislative processes and the creation of laws, promoting understanding of legal frameworks and their societal impact.",
+    "SST831": "Identifies the role of Government in providing public facilities such as water, sanitation, road, electricity etc, and recognizes their availability. Significance: Promotes understanding of public services and government responsibilities, fostering civic awareness and engagement with local infrastructure.",
+    "SST833": "Draws bar diagram to show population of different countries/India/states. Significance: Develops data visualization skills in a geographical context, enabling students to represent and interpret demographic data."
+}
+
+def show_learning_outcomes():
+    st.markdown("<div class=\"section-header\">🎯 Detailed Learning Outcomes</div>", unsafe_allow_html=True)
+    st.markdown("""This section provides a detailed breakdown of each learning outcome assessed in the NAS Class 8 survey, 
+    along with its significance in the broader educational context.
+    """)
+
+    subject_categories = {
+        "L": "Language",
+        "M": "Mathematics",
+        "SCI": "Science",
+        "SST": "Social Science"
+    }
+
+    for prefix, subject_name in subject_categories.items():
+        st.markdown(f"### {subject_name} Learning Outcomes")
+        for lo_code, lo_description in learning_outcomes_data.items():
+            if lo_code.startswith(prefix):
+                parts = lo_description.split(". Significance: ")
+                description = parts[0]
+                significance = parts[1] if len(parts) > 1 else "N/A"
+                
+                st.markdown(f"**{lo_code}:** {description}")
+                st.info(f"**Significance:** {significance}")
+                st.markdown("--- (End of learning outcome) ---")
+
+
+
+
 @st.cache_data
 def preprocess_data(df):
     """Clean and preprocess the dataset"""
@@ -1104,92 +1192,4 @@ def show_insights_and_recommendations(df_2021):
 
 if __name__ == "__main__":
     main()
-
-
-
-# Learning Outcomes Data
-learning_outcomes_data = {
-    "L813": "Read textual/non-textual materials with comprehension and identifies the details, characters, main idea and sequence of ideas and events while reading. Significance: Essential for developing strong reading comprehension and analytical skills, crucial for academic success and information processing.",
-    "M601": "Solves problems involving large numbers by applying appropriate operations. Significance: Fundamental for building a strong mathematical foundation, enabling students to handle complex calculations and real-world quantitative problems.",
-    "M606": "Solves problems on daily life situations involving addition and subtraction of fractions / decimals. Significance: Practical application of mathematical concepts, fostering problem-solving skills relevant to everyday scenarios like finance and measurements.",
-    "M620": "Finds out the perimeter and area of rectangular objects in the surroundings like floor of the class room, surfaces of a chalk box etc. Significance: Develops spatial reasoning and practical geometry skills, useful in fields like architecture, engineering, and design.",
-    "M621": "Arranges given/collected information in the form of table, pictograph and bar graph and interprets them. Significance: Crucial for data literacy, enabling students to organize, visualize, and understand information, a key skill in the data-driven world.",
-    "M702": "Interprets the division and multiplication of fractions. Significance: Advances understanding of fractional arithmetic, vital for higher-level mathematics and scientific calculations.",
-    "M705": "Solves problems related to daily life situations involving rational numbers. Significance: Enhances practical mathematical skills, allowing students to apply rational number concepts to real-world financial and measurement contexts.",
-    "M706": "Uses exponential form of numbers to simplify problems involving multiplication and division of large numbers. Significance: Simplifies complex calculations, providing a powerful tool for scientific notation and understanding exponential growth/decay.",
-    "M707": "Adds/subtracts algebraic expressions. Significance: Introduces foundational algebraic skills, essential for solving equations and understanding mathematical relationships.",
-    "M710": "Solves problems related to conversion of percentage to fraction and decimal and vice versa. Significance: Develops versatility in numerical representation, critical for financial literacy, statistics, and data interpretation.",
-    "M717": "Finds out approximate area of closed shapes by using unit square grid/graph sheet. Significance: Fosters estimation and approximation skills, useful in various practical applications where precise measurements are not always feasible.",
-    "M719": "Finds various representative values for simple data from her/his daily life contexts like mean, median and mode. Significance: Introduces basic statistical concepts, enabling students to analyze and summarize data from their environment.",
-    "M721": "Interprets data using bar graph. Significance: Enhances data visualization and interpretation skills, allowing students to draw conclusions from graphical representations.",
-    "M801": "Generalizes properties of addition, subtraction, multiplication and division of rational numbers through patterns. Significance: Deepens understanding of number properties, crucial for advanced mathematical reasoning and abstract thinking.",
-    "M802": "Finds rational numbers between two given rational numbers. Significance: Reinforces understanding of number density and rational number properties, important for number theory and advanced mathematics.",
-    "M803": "Proves divisibility rules of 2, 3,4, 5, 6, 9 and 11. Significance: Develops number sense and logical reasoning, useful for mental math and understanding number theory.",
-    "M804": "Finds squares, cubes, square roots and cube roots of numbers using different methods. Significance: Builds foundational skills in exponents and roots, essential for algebra, geometry, and various scientific calculations.",
-    "M808": "Uses various algebraic identities in solving problems of daily life. Significance: Applies algebraic concepts to practical situations, enhancing problem-solving abilities in diverse contexts.",
-    "M812": "Verifies properties of parallelogram and establishes the relationship between them through reasoning. Significance: Develops geometric reasoning and proof skills, fundamental for advanced geometry and spatial analysis.",
-    "M818": "Finds surface area and volume of cuboidal and cylindrical object. Significance: Essential for understanding 3D shapes and their properties, with applications in engineering, design, and packaging.",
-    "M819": "Draws and interprets bar charts and pie charts. Significance: Strengthens data visualization and interpretation skills, enabling effective communication of data insights.",
-    "SCI703": "Classifies materials and organisms based on properties/characteristics. Significance: Develops observational and categorization skills, foundational for scientific inquiry and understanding biological and chemical diversity.",
-    "SCI704": "Conducts simple investigation to seek answers to queries. Significance: Fosters scientific inquiry and experimental design skills, crucial for hands-on learning and problem-solving in science.",
-    "SCI705": "Relates processes and phenomenon with causes. Significance: Promotes critical thinking and cause-and-effect reasoning, essential for understanding scientific principles and natural phenomena.",
-    "SCI708": "Measures and calculates eg, temperature; pulse rate; speed of moving objects; time period of a simple pendulum, etc. Significance: Develops practical measurement and calculation skills, vital for experimental science and data collection.",
-    "SCI710": "Plots and interprets graphs. Significance: Enhances data analysis and visualization skills, allowing students to understand trends and relationships in scientific data.",
-    "SCI711": "Constructs models using materials from surroundings and explains their working. Significance: Encourages creativity and practical application of scientific knowledge, fostering hands-on learning and understanding of scientific principles.",
-    "SCI801": "Differentiates materials, organism and processes. Significance: Refines classification and analytical skills, crucial for understanding the diversity and complexity of the natural world.",
-    "SCI804": "Relates processes and phenomenon with causes. Significance: Deepens understanding of scientific causality, enabling students to explain and predict natural events.",
-    "SCI805": "Explains processes and phenomenon. Significance: Develops clear and concise scientific communication skills, essential for conveying complex ideas.",
-    "SCI807": "Measures angles of incidence and reflection, etc. Significance: Applies geometric principles to optics, fundamental for understanding light and its behavior.",
-    "SCI811": "Applies learning of scientific concepts in day-to-day life. Significance: Connects classroom learning to real-world applications, making science relevant and practical.",
-    "SCI813": "Makes efforts to protect environment. Significance: Fosters environmental awareness and responsibility, promoting sustainable practices and civic engagement.",
-    "SST605": "Identifies latitudes and longitudes, eg, poles, equator, tropics, States/UTs of India and other neighboring countries on globe and the world map. Significance: Develops geographical literacy and spatial awareness, essential for understanding global locations and navigation.",
-    "SST610": "Locates important historical sites, places on an outline map of India. Significance: Enhances historical and geographical knowledge, connecting historical events to their physical locations.",
-    "SST625": "Describes the functioning of rural and urban local government bodies in sectors like health and education. Significance: Promotes civic knowledge and understanding of local governance, empowering students to engage with their communities.",
-    "SST703": "Explains preventive actions to be undertaken in the event of disasters. Significance: Develops awareness of disaster preparedness and safety measures, crucial for personal and community well-being.",
-    "SST704": "Describes formation of landforms due to various factors. Significance: Enhances understanding of geological processes and physical geography, explaining the Earth's diverse landscapes.",
-    "SST722": "Explains the significance of equality in democracy. Significance: Fosters civic values and understanding of democratic principles, promoting social justice and human rights.",
-    "SST726": "Describes the process of election to the legislative assembly. Significance: Educates students on democratic processes and electoral systems, encouraging informed participation in governance.",
-    "SST731": "Explains the functioning of media with appropriate examples from newspapers. Significance: Develops media literacy and critical thinking about information sources, essential for navigating the modern information landscape.",
-    "SST733": "Differentiates between different kinds of markets. Significance: Introduces economic concepts and market structures, providing foundational knowledge for understanding commerce and trade.",
-    "SST734": "Traces how goods travel through various market places. Significance: Explains supply chains and economic flows, illustrating the journey of products from production to consumption.",
-    "SST802": "Describes major crops, types of farming and agricultural practices in her/his own area/state. Significance: Connects students to local agriculture and food systems, fostering understanding of economic geography and sustainability.",
-    "SST805": "Locates distribution of important minerals eg coal and mineral oil on the world map. Significance: Enhances geographical knowledge of natural resources and their global distribution, relevant to economics and environmental studies.",
-    "SST807": "Justifies judicious use of natural resources. Significance: Promotes environmental stewardship and sustainable resource management, encouraging responsible consumption and conservation.",
-    "SST809": "Draws interrelationship between types of farming and development in different regions of the world. Significance: Develops understanding of global economic patterns and the impact of agriculture on regional development.",
-    "SST810": "Distinguishes the modern period from the medieval and the ancient periods through the use of sources. Significance: Fosters historical periodization and source analysis skills, crucial for understanding historical change and continuity.",
-    "SST815": "Explains the origin, nature and spread of the revolt of 1857 and the lessons learned from it. Significance: Provides historical context on a pivotal event in Indian history, fostering understanding of colonial rule and resistance movements.",
-    "SST816": "Analyses the decline of pre-existing urban centers and handicraft industries and the development of new urban centers and industries in India during the colonial period. Significance: Explores the economic and social impact of colonialism, highlighting historical transformations in urban and industrial landscapes.",
-    "SST818": "Analyses the issues related to caste, women, widow remarriage, child marriage, social reforms and the laws and policies of colonial administration towards these issues. Significance: Examines social justice issues and historical reform movements, promoting critical awareness of social inequalities and legal frameworks.",
-    "SST823": "Applies the knowledge of the Fundamental Rights to find out about their violation, protection and promotion in a given situation. Significance: Empowers students with knowledge of their rights and legal protections, fostering civic engagement and advocacy.",
-    "SST827": "Describes the process of making a law (eg Domestic Violence Act, RTI Act, RTE Act). Significance: Educates students on legislative processes and the creation of laws, promoting understanding of legal frameworks and their societal impact.",
-    "SST831": "Identifies the role of Government in providing public facilities such as water, sanitation, road, electricity etc, and recognizes their availability. Significance: Promotes understanding of public services and government responsibilities, fostering civic awareness and engagement with local infrastructure.",
-    "SST833": "Draws bar diagram to show population of different countries/India/states. Significance: Develops data visualization skills in a geographical context, enabling students to represent and interpret demographic data."
-}
-
-def show_learning_outcomes():
-    st.markdown("<div class=\"section-header\">🎯 Detailed Learning Outcomes</div>", unsafe_allow_html=True)
-    st.markdown("""This section provides a detailed breakdown of each learning outcome assessed in the NAS Class 8 survey, 
-    along with its significance in the broader educational context.
-    """)
-
-    subject_categories = {
-        "L": "Language",
-        "M": "Mathematics",
-        "SCI": "Science",
-        "SST": "Social Science"
-    }
-
-    for prefix, subject_name in subject_categories.items():
-        st.markdown(f"### {subject_name} Learning Outcomes")
-        for lo_code, lo_description in learning_outcomes_data.items():
-            if lo_code.startswith(prefix):
-                parts = lo_description.split(". Significance: ")
-                description = parts[0]
-                significance = parts[1] if len(parts) > 1 else "N/A"
-                
-                st.markdown(f"**{lo_code}:** {description}")
-                st.info(f"**Significance:** {significance}")
-                st.markdown("--- (End of learning outcome) ---")
-
-
 
