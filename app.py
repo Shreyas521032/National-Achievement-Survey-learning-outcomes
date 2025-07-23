@@ -10,7 +10,7 @@ from plotly.subplots import make_subplots
 
 # Set page configuration
 st.set_page_config(
-    page_title="National Achievement Survey (NAS) - Class 8 Analysis",
+    page_title="National Achievement Survey (NAS) Analysis",
     page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -126,7 +126,7 @@ learning_outcomes_data = {
 def show_learning_outcomes():
     st.markdown("<div class=\"section-header\">🎯 Detailed Learning Outcomes</div>", unsafe_allow_html=True)
     st.markdown("""
-    This section provides a detailed breakdown of each learning outcome assessed in the NAS Class 8 survey, 
+    This section provides a detailed breakdown of each learning outcome assessed in the NAS survey, 
     along with its significance in the broader educational context.
     """, unsafe_allow_html=False)
 
@@ -187,11 +187,11 @@ def main():
     st.sidebar.title("Navigation")
     sections = [
         "🏠 Home & Dataset Overview",
+        "🎯 Detailed Learning Outcomes",
         "🔧 Data Preprocessing",
         "📈 Exploratory Data Analysis",
         "📊 Performance Analysis",
-        "💡 Key Insights & Recommendations",
-        "🎯 Detailed Learning Outcomes"
+        "💡 Key Insights & Recommendations"
     ]
     
     selected_section = st.sidebar.selectbox("Choose a section:", sections)
@@ -224,7 +224,7 @@ def show_home_and_overview(df, df_processed):
     
     st.markdown("""
     This interactive dashboard provides comprehensive analysis of the **National Achievement Survey (NAS)** 
-    for Class 8 students across India. Explore learning outcomes, performance trends, and educational insights 
+    for students across India. Explore learning outcomes, performance trends, and educational insights 
     from one of India's largest educational assessments.
     """, unsafe_allow_html=False)
     
@@ -242,7 +242,7 @@ def show_home_and_overview(df, df_processed):
         
         #### Overview
         The National Achievement Survey (NAS) is a large-scale assessment conducted across India to evaluate 
-        the learning outcomes of students in various classes, including Class 8. The District Report for Class 8 
+        the learning outcomes of students in various classes. The District Report for
         provides a detailed analysis of student performance in key subjects such as:
         
         - **Mathematics** - Numerical skills, problem-solving, and mathematical reasoning
@@ -1174,7 +1174,7 @@ def show_insights_and_recommendations(df_2021):
     
     with col3:
         if st.button("🎯 Download Recommendations Report"):
-            report_content = f"""National Achievement Survey (NAS) - Class 8 Analysis Report
+            report_content = f"""National Achievement Survey (NAS) Analysis Report
             Generated on: {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')}
             
             EXECUTIVE SUMMARY:
