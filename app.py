@@ -542,7 +542,7 @@ def show_eda(df_2021):
             color=hardest_topics.values,
             color_continuous_scale='Reds'
         )
-        fig_hard.update_layout(height=500, yaxis={'categoryorder': 'total ascending'}))
+        fig_hard.update_layout(height=500, yaxis={'categoryorder': 'total ascending'})
         st.plotly_chart(fig_hard, use_container_width=True)
     
     with col2:
@@ -555,7 +555,7 @@ def show_eda(df_2021):
             color=easiest_topics.values,
             color_continuous_scale='Greens'
         )
-        fig_easy.update_layout(height=500, yaxis={'categoryorder': 'total descending'}))
+        fig_easy.update_layout(height=500, yaxis={'categoryorder': 'total descending'})
         st.plotly_chart(fig_easy, use_container_width=True)
 
 def show_performance_analysis(df_2021):
@@ -634,7 +634,7 @@ def show_performance_analysis(df_2021):
             color='Overall_Performance',
             color_continuous_scale='Greens'
         )
-        fig_top_districts.update_layout(height=600, yaxis={'categoryorder': 'total ascending'}))
+        fig_top_districts.update_layout(height=600, yaxis={'categoryorder': 'total ascending'})
         st.plotly_chart(fig_top_districts, use_container_width=True)
     
     with col2:
@@ -651,7 +651,7 @@ def show_performance_analysis(df_2021):
             color='Overall_Performance',
             color_continuous_scale='Reds'
         )
-        fig_bottom_districts.update_layout(height=600, yaxis={'categoryorder': 'total descending'}))
+        fig_bottom_districts.update_layout(height=600, yaxis={'categoryorder': 'total descending'})
         st.plotly_chart(fig_bottom_districts, use_container_width=True)
     
     # Performance Distribution by State
@@ -686,7 +686,7 @@ def show_performance_analysis(df_2021):
                 color='Overall_Performance',
                 color_continuous_scale='Viridis'
             )
-            fig_state_districts.update_layout(height=400, yaxis={'categoryorder': 'total ascending'}))
+            fig_state_districts.update_layout(height=400, yaxis={'categoryorder': 'total ascending'})
             st.plotly_chart(fig_state_districts, use_container_width=True)
         
         # State statistics
@@ -830,7 +830,7 @@ def show_district_mapping(df_2021):
             color_continuous_scale='Greens',
             hover_data=['State']
         )
-        fig_top_region.update_layout(height=400, yaxis={'categoryorder': 'total ascending'}))
+        fig_top_region.update_layout(height=400, yaxis={'categoryorder': 'total ascending'})
         st.plotly_chart(fig_top_region, use_container_width=True)
     
     # Performance density map alternative
