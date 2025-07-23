@@ -1,7 +1,7 @@
 [theme]
 base = "light"
-primaryColor = "#2E86AB"          # Professional blue (education-friendly)
-backgroundColor = "#FFFFFF"        # Pure white
-secondaryBackgroundColor = "#F8F9FA"  # Light gray for cards
-textColor = "#2C3E50"             # Dark blue-gray (readable)
+primaryColor = "#2E86AB"          
+backgroundColor = "#FFFFFF"        
+secondaryBackgroundColor = "#F8F9FA"  
+textColor = "#2C3E50"          
 font = "sans serif"
