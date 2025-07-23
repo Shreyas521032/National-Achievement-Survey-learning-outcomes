@@ -220,7 +220,7 @@ def show_home_and_overview(df, df_processed):
     
     with col2:
         # Get year range
-        year_range = f"{df['Year'].min():.0f} - {df['Year'].max():.0f}" if 'Year' in df.columns else "N/A"
+        year_range = "{df['Year'].min():.0f} - {df['Year'].max():.0f}" if 'Year' in df.columns else "N/A"
         
         st.markdown('<div class="metric-card">', unsafe_allow_html=True)
         st.metric("📅 Year Range", year_range)
