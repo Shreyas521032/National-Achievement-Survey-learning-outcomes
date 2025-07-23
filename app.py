@@ -180,7 +180,7 @@ def preprocess_data(df):
 # Main application
 def main():
     # Title
-    st.markdown('<h1 class="main-header">📊 National Achievement Survey (NAS) - Class 8 Analysis</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">📊 National Achievement Survey (NAS) Dashboard</h1>', unsafe_allow_html=True)
     
     # Sidebar navigation
     st.sidebar.title("Navigation")
@@ -233,7 +233,7 @@ def show_home_and_overview(df, df_processed):
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("""### National Achievement Survey (NAS): Survey of Learning Outcomes - District Report for Class 8
+        st.markdown("""
         
         **Data Source:** Ministry of Education, Government of India  
         **Standardized By:** NDAP (National Data & Analytics Platform)  
@@ -254,7 +254,7 @@ def show_home_and_overview(df, df_processed):
         - **Aligned with NEP:** Follows National Education Policy framework
         - **Representative Sampling:** Covers diverse districts across all Indian states
         - **Standardized Testing:** Ensures consistency and reliability across regions
-        """)
+        """, unsafe_allow_html=False)
     
     with col2:
         st.markdown('<div class="metric-card">', unsafe_allow_html=True)
@@ -306,7 +306,7 @@ def show_home_and_overview(df, df_processed):
         - **Multiple Choice Questions:** Standardized format for consistency
         - **Representative Sampling:** Ensures geographic and demographic diversity
         - **Quality Assurance:** Rigorous validation and verification processes
-        """)
+        """, unsafe_allow_html=False)
     
     with col2:
         st.markdown("""#### Impact & Applications  
@@ -314,7 +314,7 @@ def show_home_and_overview(df, df_processed):
         - **Teacher Training:** Identifies areas for professional development
         - **Curriculum Enhancement:** Guides curriculum design and improvement
         - **Resource Allocation:** Helps prioritize educational investments
-        """)
+        """, unsafe_allow_html=False)
 
 def show_preprocessing(df, df_processed, math_cols, science_cols, sst_cols, language_cols):
     """Display data preprocessing steps and results"""
