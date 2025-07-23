@@ -56,7 +56,7 @@ def load_data():
         # Try to load from uploaded file first
         df = pd.read_csv('Dataset/National_Achievement_Survey_dataset.csv')
     except:
-        st.error("Please ensure DATASETDATASCIENCE.csv is in the same directory as this script.")
+        st.error("Please ensure National_Achievement_Survey_dataset.csv is in the same directory as this script.")
         st.stop()
     
     return df
@@ -231,7 +231,7 @@ def show_home_and_overview(df, df_processed):
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("""### National Achievement Survey (NAS): Survey of Learning Outcomes - District Report for Class 8
+        st.markdown(f"""### National Achievement Survey (NAS): Survey of Learning Outcomes - District Report for Class 8
         
         **Data Source:** Ministry of Education, Government of India  
         **Standardized By:** NDAP (National Data & Analytics Platform)  
