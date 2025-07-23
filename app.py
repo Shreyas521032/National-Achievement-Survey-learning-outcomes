@@ -17,36 +17,38 @@ st.set_page_config(
 )
 
 # Custom CSS for better styling
-st.markdown("""<style>
-    .main-header {
-        font-size: 2.5rem;
-        color: #1f77b4;
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-    .section-header {
-        font-size: 1.8rem;
-        color: #2c3e50;
-        border-bottom: 2px solid #3498db;
-        padding-bottom: 0.5rem;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-    }
-    .metric-card {
-        background-color: #f8f9fa;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-left: 4px solid #3498db;
-        margin: 0.5rem 0;
-    }
-    .insight-box {
-        background-color: #e8f4f8;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-left: 4px solid #17a2b8;
-        margin: 1rem 0;
-    }
-</style>""", unsafe_allow_html=True)
+st.markdown("""
+    <style>
+        .main-header {
+            font-size: 2.5rem;
+            color: #1f77b4;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .section-header {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .metric-card {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border-left: 4px solid #3498db;
+            margin: 0.5rem 0;
+        }
+        .insight-box {
+            background-color: #e8f4f8;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border-left: 4px solid #17a2b8;
+            margin: 1rem 0;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 # Data loading and caching
 @st.cache_data
@@ -231,7 +233,7 @@ def show_home_and_overview(df, df_processed):
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown(f"""### National Achievement Survey (NAS): Survey of Learning Outcomes - District Report for Class 8
+        st.markdown("""### National Achievement Survey (NAS): Survey of Learning Outcomes - District Report for Class 8
         
         **Data Source:** Ministry of Education, Government of India  
         **Standardized By:** NDAP (National Data & Analytics Platform)  
