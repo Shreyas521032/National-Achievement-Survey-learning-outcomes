@@ -1,4 +1,4 @@
-# National Achievement Survey (NAS) - Class 8 Analysis Dashboard
+# National Achievement Survey (NAS) Analysis Dashboard
 
 A comprehensive Streamlit web application for analyzing the National Achievement Survey (NAS) dataset for Class 8 students across India. This dashboard provides detailed insights into learning outcomes, performance trends, and educational patterns from one of India's largest educational assessments.
 
