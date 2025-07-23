@@ -1,6 +1,6 @@
 -----
 
-# 📊 National Achievement Survey (NAS) - Class 8 Analysis Dashboard
+# 📊 National Achievement Survey (NAS) Dashboard
 
 [](https://www.python.org/downloads/)
 [](https://streamlit.io/)
