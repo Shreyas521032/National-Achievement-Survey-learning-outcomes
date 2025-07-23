@@ -8,6 +8,8 @@
 
 An interactive and insightful dashboard for analyzing the National Achievement Survey learning outcomes. This tool provides a comprehensive exploration of student performance across various subjects, states, and districts in India, offering data-driven insights for educators, policymakers, and researchers.
 
+🔗 **Live Deployed Project:** [https://shreyas-national-achievement-survey.streamlit.app](https://shreyas-national-achievement-survey.streamlit.app/)
+
 ## ✨ Key Features
 
   * **🏠 Home & Overview:** Get a high-level summary of the dataset, its source, methodology, and key statistics.
