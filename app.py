@@ -556,7 +556,7 @@ def show_eda(df_2021):
             orientation='h',
             title="15 Best Performing Learning Outcomes",
             color=easiest_topics.values,
-            color_continuous_scale='Greens',
+            color_continuous_scale='Greens')
         fig_easy.update_layout(height=500, yaxis={'categoryorder': 'total descending'})
 def show_performance_analysis(df_2021):
     """Display detailed performance analysis"""
