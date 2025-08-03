@@ -640,16 +640,6 @@ def show_eda(df_2021):
         fig_hard.update_layout(height=500, yaxis={"categoryorder": "total ascending"})
         st.plotly_chart(fig_hard, use_container_width=True)
     
-    with col2:
-        st.markdown("**🟢 Best Performing Topics**")
-        fig_easy = px.bar(
-            x=easiest_topics.values,
-            y=easiest_topics.index,
-            orientation='h',
-            title="15 Best Performing Learning Outcomes",
-            color=easiest_topics.values,
-            color_continuous_scale='Greens')
-        fig_easy.update_layout(height=500, yaxis={'categoryorder': 'total descending'})
 def show_performance_analysis(df_2021):
     """Display detailed performance analysis"""
     st.markdown('<div class="section-header">📊 Advanced Performance Analysis</div>', unsafe_allow_html=True)
